@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>TItaniumWeb</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <button id="fileButton">Select File</button>
-        <input type="file" id="fileInput" style="display: none;">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TItanium Web</title>
+</head>
+<body>
+    <button id="fileButton">Select File</button>
+    <input type="file" id="fileInput" style="display: none;">
 
-        <script src="script.js"></script>
-    </body>
+    <script>
+        document.getElementById('fileButton').addEventListener('click', function() {
+            document.getElementById('fileInput').click();
+        });
+    </script>
+</body>
 </html>
-
-
