@@ -10,6 +10,13 @@
     <p id="models">Not Updated</p>
     <p id ="buttonPressed">Button Not Pressed</p>
 
-    <script src="uploader.js"></script>
+    <script>
+        const element = document.getElementById("selectButton");
+        element.addEventListener("click", myFunction);
+        
+        function myFunction() {
+          document.getElementById("buttonPressed").innerHTML = "Button Pressed";
+        }
+    </script>
 </body>
 </html>
