@@ -1,9 +1,13 @@
 const { ticalc, tifiles } = require('ticalc-usb');
 
-function isBrowserSupported() {
-    document.getElementById('browserSupported').innerHTML = browserSupported();
+async function chooseCalc() {
+    await ticalc.choose();
 }
 
-setInterval(isBrowserSupported, 1000);
+await ticalc.init();
+
+document.getElementById('chooseButton').addEventListener('click', await chooseCalc);
+
+
 
 
