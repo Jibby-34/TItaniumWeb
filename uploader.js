@@ -1,13 +1,13 @@
 const { ticalc, tifiles } = require('ticalc-usb');
 
-document.getElementById('chooseButton').addEventListener('click', await chooseCalc);
-document.getElementById('models').innerHTML = "2";
+clickCount = 0;
 
-function chooseCalc() {
-    document.getElementById('buttonPressed').innerHTML = "Button Pressed";
+document.getElementById('chooseButton').addEventListener('click', displayClick());
+
+function displayClick() {
+    document.getElementById('clickCounter').innerHTML = clickCount;
+    clickCount++;
 }
-
-await ticalc.init();
 
 
 
