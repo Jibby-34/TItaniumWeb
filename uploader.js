@@ -1,13 +1,6 @@
-clickCount = 0;
+let clickCount = 0;
 
-document.getElementById('chooseButton').addEventListener('click', displayClick);
-
-function displayClick() {
-    document.getElementById('clickCounter').innerHTML = clickCount;
+document.getElementById('incrementButton').addEventListener('click', function() {
     clickCount++;
-}
-
-
-
-
-
+    document.getElementById('clickCounter').innerText = clickCount;
+});
