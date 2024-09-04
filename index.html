@@ -6,13 +6,20 @@
     <title>TItanium Web</title>
 </head>
 <body>
-    <button id="fileButton">Select File</button>
-    <input type="file" id="fileInput" style="display: none;">
+    <h1>Clock</h1>
+    <br>
+    <p id = time></p>
 
     <script>
-        document.getElementById('fileButton').addEventListener('click', function() {
-            document.getElementById('fileInput').click();
-        });
+        function updateTime() {
+            document.getElementById('time').innerHTML = new Date().toLocaleTimeString();
+        }
+
+        // Update the time immediately when the page loads
+        updateTime();
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
     </script>
 </body>
 </html>
